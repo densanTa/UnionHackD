@@ -1,20 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class YRotate : MonoBehaviour
+public class Yrotate : MonoBehaviour
 {
-    public float rotationSpeed = 20f; // 回転速度を指定（度/秒）
-    // Start is called before the first frame update
+    public float rotationSpeed = 10f; // 回転速度
+
+    private Rigidbody rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
-
+        // y軸を中心に物理演算を使って回転させる
+        rb.angularVelocity = new Vector3(0, rotationSpeed * Mathf.Deg2Rad, 0);
     }
 }
+

@@ -353,6 +353,9 @@
 -analyzer:"C:/Users/mrbea/Downloads/2022.3.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Users/mrbea/Downloads/2022.3.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/DonutGame/Scripts/DonutGenerater.cs"
+"Assets/DonutGame/Scripts/DonutScript.cs"
+"Assets/DonutGame/Scripts/MoveForward.cs"
+"Assets/DonutGame/Scripts/TransRotate.cs"
 "Assets/DonutGame/Scripts/YRotate.cs"
 -langversion:9.0
 
