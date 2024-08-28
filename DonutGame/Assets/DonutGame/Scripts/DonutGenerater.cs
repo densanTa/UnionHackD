@@ -2,19 +2,20 @@ using UnityEngine;
 
 public class SpawnPrefab : MonoBehaviour
 {
-    public GameObject prefabToSpawn;  // oŒ»‚³‚¹‚éƒvƒŒƒnƒu‚ğw’è‚·‚é•Ï”
-
+    public GameObject prefabToSpawn;  // ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½nï¿½uï¿½ï¿½ï¿½wï¿½è‚·ï¿½ï¿½Ïï¿½
+    GameController gameController;
     void Start()
     {
-
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // ƒIƒuƒWƒFƒNƒg‚ÌˆÊ’u‚ÉƒvƒŒƒnƒu‚ğoŒ»‚³‚¹‚é
+            // ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ÌˆÊ’uï¿½Éƒvï¿½ï¿½ï¿½nï¿½uï¿½ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Instantiate(prefabToSpawn, transform.position, transform.rotation);
+            gameController.AddScore();
         }
     }
 }
