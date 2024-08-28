@@ -23,4 +23,10 @@ public class GameController : MonoBehaviour
 
         ScoreText.text = "" + score;
     }
+
+    public void SubScore(){
+        score -= 40;
+
+        ScoreText.text = "" + score;
+    }
 }
