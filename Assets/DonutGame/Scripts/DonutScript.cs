@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class CheckYPosition : MonoBehaviour
 {
+    GameController gameController;
+
+    void Start()
+    {
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+    }
+
+
     void Update()
     {
-        // オブジェクトのy座標が0を下回ったときにtrueを返す
+        
         if (transform.position.y < -2)
         {
             Destroy(this.gameObject);
-
-            Debug.Log("GameOver!!!!!");
+            gameController.SubScore();
+            Debug.Log("point lost!");
         }
     }
 }
