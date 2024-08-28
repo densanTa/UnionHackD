@@ -6,11 +6,14 @@ public class SpawnPrefab : MonoBehaviour
     public float speed = 1f;  // オブジェクトの移動速度を設定
     public GameObject Pivot;
     public GameObject Generator;
-
+    public TypingManager typingManager;
 
     void Start()
     {
-
+        if (typingManager == null)
+        {
+            typingManager = FindObjectOfType<TypingManager>();
+        }
     }
 
     private void Update()
@@ -19,10 +22,21 @@ public class SpawnPrefab : MonoBehaviour
 
         Debug.Log("Distance between objects: " + distance);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
         {
             // オブジェクトの位置にプレハブを出現させる
-            Instantiate(prefabToSpawn, transform.position, transform.rotation);
+            GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
+
+            // 新しく生成されたオブジェクトから SpawnPrefab スクリプトを削除する
+            SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
+            if (spawnedScript != null)
+            {
+                Destroy(spawnedScript);  // スクリプトを削除
+            }
+
+            // 正解数を1つ減らし、表示を更新
+            typingManager.CorrectCount--;
+            typingManager.UpdateCorrectCount();
         }
 
         if (distance > 0.05)
