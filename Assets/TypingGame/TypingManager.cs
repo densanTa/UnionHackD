@@ -77,7 +77,7 @@ public class TypingManager : MonoBehaviour
     {
         if (correctCountText != null)
         {
-            correctCountText.text = "Correct Count: " + CorrectCount;
+            correctCountText.text = "" + CorrectCount;
         }
     }
 }
