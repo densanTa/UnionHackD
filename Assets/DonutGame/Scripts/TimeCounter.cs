@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TimeCounter : MonoBehaviour
 {
+    public SpawnPrefab donutgenerator;
+    public TypingManager typingmanager;
     public float countdown = 90.0f;
 
     public Text timeText;
@@ -23,6 +25,8 @@ public class TimeCounter : MonoBehaviour
         if (countdown <= 0)
         {
             timeText.text = "Finish!";
+            donutgenerator.isPlaying = false;
+            typingmanager.isPlaying = false;
         }
     }
 }

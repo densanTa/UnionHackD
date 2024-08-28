@@ -225,6 +225,7 @@ MonoBehaviour:
   Pivot: {fileID: 420174802}
   Generator: {fileID: 16681593}
   typingManager: {fileID: 84550752}
+  isPlaying: 1
 --- !u!82 &16681596
 AudioSource:
   m_ObjectHideFlags: 0
@@ -367,6 +368,7 @@ MonoBehaviour:
   qText: {fileID: 1478383301}
   aText: {fileID: 1591818098}
   correctCountText: {fileID: 1564710163}
+  isPlaying: 1
 --- !u!4 &84550753
 Transform:
   m_ObjectHideFlags: 0
@@ -951,6 +953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcc6917b35c446438aac0dc334db9b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  donutgenerator: {fileID: 16681595}
+  typingmanager: {fileID: 84550752}
   countdown: 90
   timeText: {fileID: 1675015870}
 --- !u!4 &1078669962
