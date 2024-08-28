@@ -24,7 +24,6 @@ public class SpawnPrefab : MonoBehaviour
     {
         float distance = Vector3.Distance(Pivot.transform.position, Generator.transform.position);
 
-        Debug.Log("Distance between objects: " + distance);
 
         if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
         {
@@ -38,6 +37,7 @@ public class SpawnPrefab : MonoBehaviour
                 Destroy(spawnedScript);  
             }
 
+            Debug.Log(typingManager.CorrectCount);
 
             typingManager.CorrectCount--;
             typingManager.UpdateCorrectCount();

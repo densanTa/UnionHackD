@@ -149,7 +149,7 @@ MonoBehaviour:
   speed: 1
   Pivot: {fileID: 420174802}
   Generator: {fileID: 16681593}
-  typingManager: {fileID: 0}
+  typingManager: {fileID: 84550752}
 --- !u!1 &84550751
 GameObject:
   m_ObjectHideFlags: 0
