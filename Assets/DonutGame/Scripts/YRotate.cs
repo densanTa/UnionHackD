@@ -1,20 +1,22 @@
+
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Yrotate : MonoBehaviour
+public class YRotate : MonoBehaviour
 {
-    public float rotationSpeed = 10f; // ‰ñ“]‘¬“x
-
-    private Rigidbody rb;
-
+    public float rotationSpeed = 20f; // ï¿½ï¿½]ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½wï¿½ï¿½iï¿½x/ï¿½bï¿½j
+    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        
     }
 
-    void FixedUpdate()
+    // Update is called once per frame
+    void Update()
     {
-        // y²‚ğ’†S‚É•¨—‰‰Z‚ğg‚Á‚Ä‰ñ“]‚³‚¹‚é
-        rb.angularVelocity = new Vector3(0, rotationSpeed * Mathf.Deg2Rad, 0);
+        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+
     }
 }
 

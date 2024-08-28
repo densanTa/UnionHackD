@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/Test.unity.meta
+guid: 1afd04b2057be184a86fe6cfb72ee464
+========
 guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
+>>>>>>>> kouta_donut_ignoretest:Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
