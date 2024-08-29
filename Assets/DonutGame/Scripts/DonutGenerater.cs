@@ -10,6 +10,11 @@ public class SpawnPrefab : MonoBehaviour
     public TypingManager typingManager;
     GameController gameController;
 
+    //âπäyä÷åW
+    private AudioSource audiosource;
+    public AudioClip dropSE;
+    public AudioClip dropmissSE;
+
     void Start()
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
@@ -18,6 +23,10 @@ public class SpawnPrefab : MonoBehaviour
         {
             typingManager = FindObjectOfType<TypingManager>();
         }
+
+        //audioÇéÊìæ.
+        audiosource = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -30,6 +39,9 @@ public class SpawnPrefab : MonoBehaviour
             GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
 
             gameController.AddScore();
+            //dropSEÇçƒê∂.
+            audiosource.PlayOneShot(dropSE);
+
 
             SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
             if (spawnedScript != null)
@@ -41,6 +53,13 @@ public class SpawnPrefab : MonoBehaviour
 
             typingManager.CorrectCount--;
             typingManager.UpdateCorrectCount();
+        }
+
+        if (typingManager.CorrectCount == 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            //dropmissSEÇçƒê∂.
+            audiosource.PlayOneShot(dropmissSE);
+
         }
 
         if (distance > 0.05)

@@ -26,7 +26,7 @@ public class SEManager : MonoBehaviour
                 audiosource.PlayOneShot(dropSE);
             }
 
-            if (typingManager.CorrectCount <= 0)
+            else
             {
                 audiosource.PlayOneShot(dropmissSE);
             }
