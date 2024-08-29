@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class SpawnPrefab : MonoBehaviour
 {
-    public GameObject[] prefabsToSpawn; 
+    public GameObject[] prefabToSpawn; 
     public float speed = 1f;  
     public GameObject Pivot;
     public GameObject Generator;
@@ -35,58 +37,58 @@ public class SpawnPrefab : MonoBehaviour
         
         
         if(isPlaying){
-        if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
-        {
-            int randomIndex = Random.Range(0, prefabsToSpawn.Length);  // ランダムなインデックスを生成
-            GameObject selectedPrefab = prefabsToSpawn[randomIndex];  // ランダムに選ばれたプレハブを取得
-            GameObject spawnedObject = Instantiate(selectedPrefab, transform.position, transform.rotation);
-
-            gameController.AddScore();
-
-            SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
-            if (spawnedScript != null)
-
-            {
-                GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
+            if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
+            {   
+                int randomIndex = Random.Range(0, prefabToSpawn.Length);  // ランダムなインデックスを生成
+                GameObject selectedPrefab = prefabToSpawn[randomIndex];  // ランダムに選ばれたプレハブを取得
+                GameObject spawnedObject = Instantiate(selectedPrefab, transform.position, transform.rotation);
 
                 gameController.AddScore();
                 audiosource.PlayOneShot(dropSE);
-
-
                 SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
                 if (spawnedScript != null)
                 {
-                    Destroy(spawnedScript);
+                    
+
+                    
+                    audiosource.PlayOneShot(dropSE);
                 }
 
-                Debug.Log(typingManager.CorrectCount);
 
-                typingManager.CorrectCount--;
-                typingManager.UpdateCorrectCount();
+                    spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
+                    if (spawnedScript != null)
+                    {
+                        Destroy(spawnedScript);
+                    }
+
+                    Debug.Log(typingManager.CorrectCount);
+
+                    typingManager.CorrectCount--;
+                    typingManager.UpdateCorrectCount();
             }
 
-            if (typingManager.CorrectCount == 0 && Input.GetKeyDown(KeyCode.Space))
-            {
-
-                audiosource.PlayOneShot(dropmissSE);
-            }
-
-            if (distance > 0.05)
-            {
-                if (Input.GetKey(KeyCode.UpArrow))
+                if (typingManager.CorrectCount == 0 && Input.GetKeyDown(KeyCode.Space))
                 {
-                    transform.Translate(0, 0, speed * Time.deltaTime);
-                }
-            }
 
-            if (distance < 0.41)
-            {
-                if (Input.GetKey(KeyCode.DownArrow))
-                {
-                    transform.Translate(0, 0, -speed * Time.deltaTime);
+                    audiosource.PlayOneShot(dropmissSE);
                 }
-            }
-        }
+
+                if (distance > 0.05)
+                {
+                    if (Input.GetKey(KeyCode.UpArrow))
+                    {
+                        transform.Translate(0, 0, speed * Time.deltaTime);
+                    }
+                }
+
+                if (distance < 0.41)
+                {
+                    if (Input.GetKey(KeyCode.DownArrow))
+                    {
+                        transform.Translate(0, 0, -speed * Time.deltaTime);
+                    }
+                }
+            
 
                 
         }

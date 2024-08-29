@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -220,13 +220,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb3d14b6c0578a499cf2c88b42e6cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsToSpawn:
-  - {fileID: 5869213248351403094, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
-  - {fileID: 6020311964160518906, guid: a434923c2bf0a4557946976bca1397ca, type: 3}
-  - {fileID: 3641111544981939413, guid: 435e2e8a8e9cd48e3adcf379d3c4d7e2, type: 3}
-  - {fileID: 186799609498798025, guid: 2881fef2849194f4788664e1e7c11866, type: 3}
-  - {fileID: 5433448066923563074, guid: 0237281380e6d4d86ad7742a225628c0, type: 3}
-  - {fileID: 8646738973155252782, guid: fcfb4cbcc867a4808af09e55c877dfc0, type: 3}
+  prefabToSpawn:
+  - {fileID: 7335578996190977714, guid: afcbeecc7f3165f44a65a77fa0c7cc3b, type: 3}
+  - {fileID: 237056301007406322, guid: 8c9df5189dc54b642a3f3edffac3ca37, type: 3}
+  - {fileID: 3476728153160009121, guid: 671d3462b680b064586056c6e2bbccca, type: 3}
+  - {fileID: 1317900538016240287, guid: 6d92595e2cb374e448b9202182c86d16, type: 3}
+  - {fileID: 8470798625620320625, guid: 703965d402ccfc64ba4b25a72ea7afc1, type: 3}
+  - {fileID: 935279566187642203, guid: 9bf47edbd5e4b5640954e2f4b3046eb4, type: 3}
   speed: 1
   Pivot: {fileID: 420174802}
   Generator: {fileID: 16681593}
