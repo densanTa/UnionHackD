@@ -15,15 +15,25 @@ public class TimeCounter : MonoBehaviour
 
     private AudioSource audiosource;
     public AudioClip FinishSE;
+    public AudioClip CountdownSE;
     private bool isPose = true;
     public bool isPlaying = false;
     
+    public GameObject count_3;
+    public GameObject count_2;
+    public GameObject count_1;
+    public GameObject count_start;
     void Start()
     {
         gameOverText.SetActive(false);
+        count_3.SetActive(false);
+        count_2.SetActive(false);
+        count_1.SetActive(false);
+        count_start.SetActive(false);
         audiosource = GetComponent<AudioSource>();
         donutgenerator.isPlaying = false;
         typingmanager.isPlaying = false;
+        Invoke("Count_3on",1.0f);
         Invoke("StartUP",4.0f);
         Invoke("FinishSESounder",countdown + 4.0f);
     }
@@ -71,4 +81,38 @@ public class TimeCounter : MonoBehaviour
         typingmanager.isPlaying = true;
     }
 
+    void Count_3on(){
+        count_3.SetActive(true);
+        audiosource.PlayOneShot(CountdownSE);
+        Invoke("Count_3off",1.0f);
+    }
+
+    void Count_3off(){
+        count_3.SetActive(false);
+        Count_2on();
+    }
+
+    void Count_2on(){
+        count_2.SetActive(true);
+        Invoke("Count_2off",1.0f);
+    }
+    void Count_2off(){
+        count_2.SetActive(false);
+        Count_1on();
+    }
+    void Count_1on(){
+        count_1.SetActive(true);
+        Invoke("Count_1off",1.0f);
+    }
+    void Count_1off(){
+        count_1.SetActive(false);
+        Count_starton();
+    }
+    void Count_starton(){
+        count_start.SetActive(true);
+        Invoke("Count_startoff",1.0f);
+    }
+    void Count_startoff(){
+        count_start.SetActive(false);
+    }
 }

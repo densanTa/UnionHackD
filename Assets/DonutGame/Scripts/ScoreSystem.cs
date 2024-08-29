@@ -11,7 +11,7 @@ public class ScoreSystem : MonoBehaviour
     public Text ScoreText;
     void Start()
     {
-        ScoreText.text = "Your Score:" + GameController.score; 
+        ScoreText.text = "あなたの得点:" + GameController.score; 
     }
 
     // Update is called once per frame
