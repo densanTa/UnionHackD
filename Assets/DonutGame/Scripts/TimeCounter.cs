@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeCounter : MonoBehaviour
 {
@@ -29,6 +30,12 @@ public class TimeCounter : MonoBehaviour
             donutgenerator.isPlaying = false;
             typingmanager.isPlaying = false;
             gameOverText.SetActive(true);
+            Invoke("ChangeScene", 4.0f);
         }
     }
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("Result");
+    }
+
 }
