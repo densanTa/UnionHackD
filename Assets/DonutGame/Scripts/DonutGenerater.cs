@@ -1,9 +1,8 @@
-
 using UnityEngine;
 
 public class SpawnPrefab : MonoBehaviour
 {
-    public GameObject prefabToSpawn;  
+    public GameObject[] prefabsToSpawn;  // プレハブを配列で管理
     public float speed = 1f;  
     public GameObject Pivot;
     public GameObject Generator;
@@ -24,10 +23,11 @@ public class SpawnPrefab : MonoBehaviour
     {
         float distance = Vector3.Distance(Pivot.transform.position, Generator.transform.position);
 
-
         if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
+            int randomIndex = Random.Range(0, prefabsToSpawn.Length);  // ランダムなインデックスを生成
+            GameObject selectedPrefab = prefabsToSpawn[randomIndex];  // ランダムに選ばれたプレハブを取得
+            GameObject spawnedObject = Instantiate(selectedPrefab, transform.position, transform.rotation);
 
             gameController.AddScore();
 
@@ -47,16 +47,13 @@ public class SpawnPrefab : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
-   
                 transform.Translate(0, 0, speed * Time.deltaTime);
             }
         }
-
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(0, 0, -speed * Time.deltaTime);
         }
-
     }
 }
