@@ -48,7 +48,20 @@ public class SpawnPrefab : MonoBehaviour
             if (Input.GetKey(KeyCode.UpArrow))
             {
    
+<<<<<<< Updated upstream
                 transform.Translate(0, 0, speed * Time.deltaTime);
+=======
+                    transform.Translate(0, 0, speed * Time.deltaTime);
+                }
+            }
+
+            if (distance < 0.41)
+            {
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    transform.Translate(0, 0, -speed * Time.deltaTime);
+                }
+>>>>>>> Stashed changes
             }
         }
 
