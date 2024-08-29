@@ -32,7 +32,8 @@ public class SpawnPrefab : MonoBehaviour
     {
         float distance = Vector3.Distance(Pivot.transform.position, Generator.transform.position);
 
-        if (isPlaying){
+        if (isPlaying)
+        {
             if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
             {
                 GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
@@ -73,6 +74,6 @@ public class SpawnPrefab : MonoBehaviour
                     transform.Translate(0, 0, -speed * Time.deltaTime);
                 }
             }
-
+        }
     }
 }
