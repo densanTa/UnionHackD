@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class SpawnPrefab : MonoBehaviour
 {
-    public GameObject prefabToSpawn;  
-    public float speed = 1f;  
+    public GameObject prefabToSpawn;
+    public float speed = 1f;
     public GameObject Pivot;
     public GameObject Generator;
     public TypingManager typingManager;
@@ -13,7 +13,7 @@ public class SpawnPrefab : MonoBehaviour
     void Start()
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
-        
+
         if (typingManager == null)
         {
             typingManager = FindObjectOfType<TypingManager>();
@@ -34,7 +34,7 @@ public class SpawnPrefab : MonoBehaviour
             SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
             if (spawnedScript != null)
             {
-                Destroy(spawnedScript);  
+                Destroy(spawnedScript);
             }
 
             Debug.Log(typingManager.CorrectCount);
@@ -47,29 +47,16 @@ public class SpawnPrefab : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
-   
-<<<<<<< Updated upstream
                 transform.Translate(0, 0, speed * Time.deltaTime);
-=======
-                    transform.Translate(0, 0, speed * Time.deltaTime);
-                }
-            }
-
-            if (distance < 0.41)
-            {
-                if (Input.GetKey(KeyCode.DownArrow))
-                {
-                    transform.Translate(0, 0, -speed * Time.deltaTime);
-                }
->>>>>>> Stashed changes
             }
         }
 
-
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (distance < 0.41)
         {
-            transform.Translate(0, 0, -speed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.Translate(0, 0, -speed * Time.deltaTime);
+            }
         }
-
     }
 }
