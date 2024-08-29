@@ -24,7 +24,7 @@ public class TypingManager : MonoBehaviour
     // 正解数を保持する変数
     public int CorrectCount {get; set;}
 
-    public bool isPlaying = true;
+    public bool isPlaying = false;
 
     private AudioSource audiosource;
     public AudioClip typingSE;

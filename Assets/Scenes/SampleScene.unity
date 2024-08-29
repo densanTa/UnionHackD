@@ -1176,6 +1176,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1304477355}
   timeText: {fileID: 1675015870}
   FinishSE: {fileID: 8300000, guid: e1de944e2d49e7b41a537eb69b92c96a, type: 3}
+  isPlaying: 0
 --- !u!4 &1078669962
 Transform:
   m_ObjectHideFlags: 0
@@ -1918,7 +1919,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B8B\u308A\u6642\u9593"
+  m_Text: Ready?
 --- !u!222 &1675015871
 CanvasRenderer:
   m_ObjectHideFlags: 0
