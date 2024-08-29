@@ -6,6 +6,9 @@ public class SEManager : MonoBehaviour
 {
     private AudioSource audiosource;
     public AudioClip dropSE;
+    public AudioClip dropmissSE;
+
+    public TypingManager typingManager;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +21,17 @@ public class SEManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            audiosource.PlayOneShot(dropSE);
+            if(typingManager.CorrectCount > 0)
+            {
+                audiosource.PlayOneShot(dropSE);
+            }
+
+            else
+            {
+                audiosource.PlayOneShot(dropmissSE);
+            }
         }
+
+
     }
 }

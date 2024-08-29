@@ -3,21 +3,29 @@ using UnityEngine;
 
 public class SpawnPrefab : MonoBehaviour
 {
-    public GameObject prefabToSpawn;  
-    public float speed = 1f;  
+    public GameObject prefabToSpawn;
+    public float speed = 1f;
     public GameObject Pivot;
     public GameObject Generator;
     public TypingManager typingManager;
     GameController gameController;
     public bool isPlaying = true;
+
+    private AudioSource audiosource;
+    public AudioClip dropSE;
+    public AudioClip dropmissSE;
+
     void Start()
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
-        
+
         if (typingManager == null)
         {
             typingManager = FindObjectOfType<TypingManager>();
         }
+
+        audiosource = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -30,11 +38,13 @@ public class SpawnPrefab : MonoBehaviour
                 GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
 
                 gameController.AddScore();
+                audiosource.PlayOneShot(dropSE);
+
 
                 SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
                 if (spawnedScript != null)
                 {
-                    Destroy(spawnedScript);  
+                    Destroy(spawnedScript);
                 }
 
                 Debug.Log(typingManager.CorrectCount);
@@ -43,20 +53,26 @@ public class SpawnPrefab : MonoBehaviour
                 typingManager.UpdateCorrectCount();
             }
 
+            if (typingManager.CorrectCount == 0 && Input.GetKeyDown(KeyCode.Space))
+            {
+                audiosource.PlayOneShot(dropmissSE);
+            }
+
             if (distance > 0.05)
             {
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
-   
                     transform.Translate(0, 0, speed * Time.deltaTime);
                 }
             }
 
-
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (distance < 0.41)
             {
-                transform.Translate(0, 0, -speed * Time.deltaTime);
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    transform.Translate(0, 0, -speed * Time.deltaTime);
+                }
             }
-        }
+
     }
 }
