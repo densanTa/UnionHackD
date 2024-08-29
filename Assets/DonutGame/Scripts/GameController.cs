@@ -6,7 +6,8 @@ public class GameController : MonoBehaviour
 {
     // Start is called before the first frame update
     public Text ScoreText;
-    int score = 0;
+        public static int score = 0;
+
     void Start()
     {
         ScoreText.text = ""+score;
@@ -29,4 +30,6 @@ public class GameController : MonoBehaviour
 
         ScoreText.text = "" + score;
     }
+
+    
 }
