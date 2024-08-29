@@ -10,7 +10,7 @@ public class SpawnPrefab : MonoBehaviour
     public GameObject Generator;
     public TypingManager typingManager;
     GameController gameController;
-    public bool isPlaying = true;
+    public bool isPlaying = false;
 
     private AudioSource audiosource;
     public AudioClip dropSE;
