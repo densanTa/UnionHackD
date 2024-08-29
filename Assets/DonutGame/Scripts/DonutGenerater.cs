@@ -1,10 +1,9 @@
-
 using UnityEngine;
 
 public class SpawnPrefab : MonoBehaviour
 {
-    public GameObject prefabToSpawn;
-    public float speed = 1f;
+    public GameObject[] prefabsToSpawn; 
+    public float speed = 1f;  
     public GameObject Pivot;
     public GameObject Generator;
     public TypingManager typingManager;
@@ -32,9 +31,21 @@ public class SpawnPrefab : MonoBehaviour
     {
         float distance = Vector3.Distance(Pivot.transform.position, Generator.transform.position);
 
-        if (isPlaying)
+
+        
+        
+        if(isPlaying){
+        if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
         {
-            if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
+            int randomIndex = Random.Range(0, prefabsToSpawn.Length);  // ランダムなインデックスを生成
+            GameObject selectedPrefab = prefabsToSpawn[randomIndex];  // ランダムに選ばれたプレハブを取得
+            GameObject spawnedObject = Instantiate(selectedPrefab, transform.position, transform.rotation);
+
+            gameController.AddScore();
+
+            SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
+            if (spawnedScript != null)
+
             {
                 GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
 
@@ -56,6 +67,7 @@ public class SpawnPrefab : MonoBehaviour
 
             if (typingManager.CorrectCount == 0 && Input.GetKeyDown(KeyCode.Space))
             {
+
                 audiosource.PlayOneShot(dropmissSE);
             }
 
@@ -75,5 +87,9 @@ public class SpawnPrefab : MonoBehaviour
                 }
             }
         }
+
+                
+        }
+
     }
 }
