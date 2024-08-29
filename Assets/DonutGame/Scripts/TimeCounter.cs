@@ -12,9 +12,14 @@ public class TimeCounter : MonoBehaviour
     public GameObject gameOverText;
 
     public Text timeText;
+
+    private AudioSource audiosource;
+    public AudioClip FinishSE;
     void Start()
     {
         gameOverText.SetActive(false);
+        audiosource = GetComponent<AudioSource>();
+        audiosource.PlayOneShot(FinishSE);
     }
 
     // Update is called once per frame
@@ -24,12 +29,14 @@ public class TimeCounter : MonoBehaviour
 
         timeText.text = countdown.ToString("f1") + "";
 
+       
         if (countdown <= 0)
         {
             timeText.text = "Finish!";
             donutgenerator.isPlaying = false;
             typingmanager.isPlaying = false;
             gameOverText.SetActive(true);
+            
             Invoke("ChangeScene", 4.0f);
         }
     }
