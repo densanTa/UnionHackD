@@ -15,22 +15,29 @@ public class TimeCounter : MonoBehaviour
 
     private AudioSource audiosource;
     public AudioClip FinishSE;
+
+    
+    
     void Start()
     {
         gameOverText.SetActive(false);
         audiosource = GetComponent<AudioSource>();
-        audiosource.PlayOneShot(FinishSE);
+        Invoke("FinishSESounder",countdown );
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         countdown -= Time.deltaTime;
 
         timeText.text = countdown.ToString("f1") + "";
 
-       
-        if (countdown <= 0)
+
+            if(countdown == 0){
+                
+            }
+            if (countdown <= 0)
         {
             timeText.text = "Finish!";
             donutgenerator.isPlaying = false;
@@ -39,10 +46,19 @@ public class TimeCounter : MonoBehaviour
             
             Invoke("ChangeScene", 4.0f);
         }
+
+       
+       
+        
     }
+
     void ChangeScene()
     {
         SceneManager.LoadScene("Result");
     }
+    void FinishSESounder(){
+        audiosource.PlayOneShot(FinishSE);
+    }
+    
 
 }

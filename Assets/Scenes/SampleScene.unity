@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   donutgenerator: {fileID: 16681595}
   typingmanager: {fileID: 84550752}
-  countdown: 5
+  countdown: 90
   gameOverText: {fileID: 1304477355}
   timeText: {fileID: 1675015870}
   FinishSE: {fileID: 8300000, guid: e1de944e2d49e7b41a537eb69b92c96a, type: 3}
@@ -1075,7 +1075,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
