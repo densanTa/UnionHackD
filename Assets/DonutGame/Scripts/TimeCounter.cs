@@ -15,8 +15,6 @@ public class TimeCounter : MonoBehaviour
 
     private AudioSource audiosource;
     public AudioClip FinishSE;
-
-    
     
     void Start()
     {
@@ -43,7 +41,6 @@ public class TimeCounter : MonoBehaviour
             donutgenerator.isPlaying = false;
             typingmanager.isPlaying = false;
             gameOverText.SetActive(true);
-            
             Invoke("ChangeScene", 4.0f);
         }
 
