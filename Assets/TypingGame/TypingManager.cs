@@ -24,6 +24,7 @@ public class TypingManager : MonoBehaviour
     // 正解数を保持する変数
     public int CorrectCount {get; set;}
 
+    public bool isPlaying = true;
     void Start()
     {
         OutPut();
@@ -33,6 +34,7 @@ public class TypingManager : MonoBehaviour
 
     void Update()
     {
+        if(isPlaying){
         if (Input.GetKeyDown(_aString[_aNum].ToString()))
         {
             Correct();
@@ -40,6 +42,8 @@ public class TypingManager : MonoBehaviour
             {
                 OutPut();
             }
+        }
+
         }
 
     }

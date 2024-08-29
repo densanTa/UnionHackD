@@ -9,7 +9,7 @@ public class SpawnPrefab : MonoBehaviour
     public GameObject Generator;
     public TypingManager typingManager;
     GameController gameController;
-
+    public bool isPlaying = true;
     void Start()
     {
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
@@ -24,39 +24,39 @@ public class SpawnPrefab : MonoBehaviour
     {
         float distance = Vector3.Distance(Pivot.transform.position, Generator.transform.position);
 
-
-        if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
-
-            gameController.AddScore();
-
-            SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
-            if (spawnedScript != null)
+        if (isPlaying){
+            if (typingManager.CorrectCount > 0 && Input.GetKeyDown(KeyCode.Space))
             {
-                Destroy(spawnedScript);  
+                GameObject spawnedObject = Instantiate(prefabToSpawn, transform.position, transform.rotation);
+
+                gameController.AddScore();
+
+                SpawnPrefab spawnedScript = spawnedObject.GetComponent<SpawnPrefab>();
+                if (spawnedScript != null)
+                {
+                    Destroy(spawnedScript);  
+                }
+
+                Debug.Log(typingManager.CorrectCount);
+
+                typingManager.CorrectCount--;
+                typingManager.UpdateCorrectCount();
             }
 
-            Debug.Log(typingManager.CorrectCount);
-
-            typingManager.CorrectCount--;
-            typingManager.UpdateCorrectCount();
-        }
-
-        if (distance > 0.05)
-        {
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (distance > 0.05)
             {
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
    
-                transform.Translate(0, 0, speed * Time.deltaTime);
+                    transform.Translate(0, 0, speed * Time.deltaTime);
+                }
+            }
+
+
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.Translate(0, 0, -speed * Time.deltaTime);
             }
         }
-
-
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.Translate(0, 0, -speed * Time.deltaTime);
-        }
-
     }
 }

@@ -16,8 +16,9 @@ public class CheckYPosition : MonoBehaviour
         if (transform.position.y < -2)
         {
             Destroy(this.gameObject);
-            gameController.SubScore();
-            Debug.Log("point lost!");
+                gameController.SubScore();
+                Debug.Log("point lost!");
+            
         }
     }
 }
