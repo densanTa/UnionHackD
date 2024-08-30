@@ -2857,13 +2857,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4457414372294257409, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5869213248351403094, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
       propertyPath: m_Name
       value: AimDonut
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6638941921928278512, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
     - {fileID: 4457414372294257409, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
+    - {fileID: 6638941921928278512, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
