@@ -18,6 +18,6 @@ public class ReturnTitle : MonoBehaviour
     }
 
     public void OnRetry(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Title");
     }
 }
