@@ -28,7 +28,7 @@ public class TypingManager : MonoBehaviour
     void Start()
     {
         OutPut();
-        CorrectCount = 30;  // 正解数を初期化
+        CorrectCount = 0;  // 正解数を初期化
         UpdateCorrectCount();
     }
 
