@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        score = 0;
         ScoreText.text = ""+score;
         audiosource = GetComponent<AudioSource>();
     }
