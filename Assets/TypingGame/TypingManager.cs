@@ -24,35 +24,26 @@ public class TypingManager : MonoBehaviour
     // 正解数を保持する変数
     public int CorrectCount {get; set;}
 
-    public bool isPlaying = false;
-
-    private AudioSource audiosource;
-    public AudioClip typingSE;
-    public AudioClip CorrectSE;
+    public bool isPlaying = true;
     void Start()
     {
         OutPut();
-        CorrectCount = 0;  // 正解数を初期化
+        CorrectCount = 30;  // 正解数を初期化
         UpdateCorrectCount();
-
-        audiosource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        if(isPlaying){
+      if(isPlaying){
         if (Input.GetKeyDown(_aString[_aNum].ToString()))
         {
-            audiosource.PlayOneShot(typingSE);
             Correct();
             if (_aNum >= _aString.Length)
             {
                 OutPut();
             }
         }
-
-        }
-
+      }
     }
 
     void OutPut()
@@ -79,7 +70,7 @@ public class TypingManager : MonoBehaviour
         {
             CorrectCount++;
             UpdateCorrectCount();
-            audiosource.PlayOneShot(CorrectSE);
+
         }
     }
 
