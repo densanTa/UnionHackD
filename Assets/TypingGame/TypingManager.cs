@@ -25,10 +25,15 @@ public class TypingManager : MonoBehaviour
     public int CorrectCount {get; set;}
 
     public bool isPlaying = true;
+
+    private AudioSource audiosource;
+    public AudioClip typingSE;
+    public AudioClip correctSE;
     void Start()
     {
         OutPut();
         CorrectCount = 0;  // 正解数を初期化
+        audiosource = GetComponent<AudioSource>();
         UpdateCorrectCount();
     }
 
@@ -41,6 +46,7 @@ public class TypingManager : MonoBehaviour
             if (_aNum >= _aString.Length)
             {
                 OutPut();
+                
             }
         }
       }
@@ -64,11 +70,13 @@ public class TypingManager : MonoBehaviour
     {
         _aNum++;
         aText.text = "<color=#6A6A6A>" + _aString.Substring(0, _aNum) + "</color>" + _aString.Substring(_aNum);
+        audiosource.PlayOneShot(typingSE);
 
         // 正解数を増やす
         if (_aNum >= _aString.Length)
         {
             CorrectCount++;
+            audiosource.PlayOneShot(correctSE);
             UpdateCorrectCount();
 
         }

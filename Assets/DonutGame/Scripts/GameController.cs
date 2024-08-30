@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
     }
 
     public void SubScore(){
-        score -= 40;
+        score -= 30;
 
         ScoreText.text = "" + score;
 
