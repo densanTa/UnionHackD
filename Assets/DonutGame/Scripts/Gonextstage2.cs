@@ -20,6 +20,6 @@ public class Gonextstage2 : MonoBehaviour
     }
 
     private void GoSelectStage(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene2");
     }
 }
