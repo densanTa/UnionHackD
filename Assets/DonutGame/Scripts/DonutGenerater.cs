@@ -15,6 +15,7 @@ public class SpawnPrefab : MonoBehaviour
     private AudioSource audiosource;
     public AudioClip dropSE;
     public AudioClip dropmissSE;
+    public float rotatespeed = 5f;
 
     void Start()
     {
@@ -73,7 +74,7 @@ public class SpawnPrefab : MonoBehaviour
                     audiosource.PlayOneShot(dropmissSE);
                 }
 
-                if (distance > 0.05)
+                if (distance > 0.1)
                 {
                     if (Input.GetKey(KeyCode.UpArrow))
                     {
@@ -87,6 +88,14 @@ public class SpawnPrefab : MonoBehaviour
                     {
                         transform.Translate(0, 0, -speed * Time.deltaTime);
                     }
+                }
+
+                if (Input.GetKey(KeyCode.LeftArrow)){
+                    transform.Rotate(0, 0, rotatespeed * Time.deltaTime);
+                }
+
+                if (Input.GetKey(KeyCode.RightArrow)){
+                    transform.Rotate(0, 0, -rotatespeed * Time.deltaTime);
                 }
             
 

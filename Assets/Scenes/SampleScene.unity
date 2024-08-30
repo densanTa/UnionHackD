@@ -234,6 +234,7 @@ MonoBehaviour:
   isPlaying: 1
   dropSE: {fileID: 8300000, guid: 13acf4a3329108b42b3791324eee1a7e, type: 3}
   dropmissSE: {fileID: 8300000, guid: 4362011526cdde048aa12de8a2f501fe, type: 3}
+  rotatespeed: 200
 --- !u!82 &16681596
 AudioSource:
   m_ObjectHideFlags: 0
