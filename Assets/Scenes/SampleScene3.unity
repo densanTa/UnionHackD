@@ -366,6 +366,7 @@ MonoBehaviour:
   aText: {fileID: 1591818098}
   correctCountText: {fileID: 1564710163}
   isPlaying: 1
+  currentDifficulty: 0
   typingSE: {fileID: 8300000, guid: f13ac0eb83777f048883b1a4f083b62e, type: 3}
   correctSE: {fileID: 8300000, guid: 9a5148dd5baf03845a92e9bfbf3336dc, type: 3}
 --- !u!4 &84550753
@@ -1442,7 +1443,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -334}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1021545856
 CanvasRenderer:
@@ -1629,7 +1630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   donutgenerator: {fileID: 16681595}
   typingmanager: {fileID: 84550752}
-  countdown: 10
+  countdown: 120
   gameOverText: {fileID: 1304477355}
   timeText: {fileID: 1675015870}
   FinishSE: {fileID: 8300000, guid: 9ee450a6a4fadda49bb5daed6e83fa75, type: 3}
@@ -1930,7 +1931,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -400}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1478383300
 CanvasRenderer:
@@ -2088,7 +2089,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -480}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1591818097
 CanvasRenderer:
