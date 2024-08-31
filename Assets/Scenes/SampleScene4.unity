@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   donutgenerator: {fileID: 16681595}
   typingmanager: {fileID: 84550752}
-  countdown: 120
+  countdown: 150
   gameOverText: {fileID: 1304477355}
   timeText: {fileID: 1675015870}
   FinishSE: {fileID: 8300000, guid: 9ee450a6a4fadda49bb5daed6e83fa75, type: 3}
