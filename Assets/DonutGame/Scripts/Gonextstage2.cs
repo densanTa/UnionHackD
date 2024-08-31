@@ -7,6 +7,8 @@ public class Gonextstage2 : MonoBehaviour
 {
     private AudioSource audiosource;
     public AudioClip start2SE;
+    public TypingManager typingManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class Gonextstage2 : MonoBehaviour
         Invoke("GoSelectStage",1.0f);
     }
 
-    private void GoSelectStage(){
+    private void GoSelectStage2(){
         SceneManager.LoadScene("SampleScene2");
     }
 }

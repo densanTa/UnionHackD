@@ -208,33 +208,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2112226912059890188, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
   m_PrefabInstance: {fileID: 1969260080}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &16681595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16681593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb3d14b6c0578a499cf2c88b42e6cd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToSpawn:
-  - {fileID: 7335578996190977714, guid: afcbeecc7f3165f44a65a77fa0c7cc3b, type: 3}
-  - {fileID: 237056301007406322, guid: 8c9df5189dc54b642a3f3edffac3ca37, type: 3}
-  - {fileID: 3476728153160009121, guid: 671d3462b680b064586056c6e2bbccca, type: 3}
-  - {fileID: 1317900538016240287, guid: 6d92595e2cb374e448b9202182c86d16, type: 3}
-  - {fileID: 8470798625620320625, guid: 703965d402ccfc64ba4b25a72ea7afc1, type: 3}
-  - {fileID: 935279566187642203, guid: 9bf47edbd5e4b5640954e2f4b3046eb4, type: 3}
-  speed: 1
-  Pivot: {fileID: 1815488886}
-  Generator: {fileID: 16681593}
-  typingManager: {fileID: 84550752}
-  isPlaying: 1
-  dropSE: {fileID: 8300000, guid: 13acf4a3329108b42b3791324eee1a7e, type: 3}
-  dropmissSE: {fileID: 8300000, guid: 4362011526cdde048aa12de8a2f501fe, type: 3}
-  rotatespeed: 300
 --- !u!82 &16681596
 AudioSource:
   m_ObjectHideFlags: 0
@@ -331,6 +304,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &16681597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16681593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb3d14b6c0578a499cf2c88b42e6cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn:
+  - {fileID: 7335578996190977714, guid: afcbeecc7f3165f44a65a77fa0c7cc3b, type: 3}
+  - {fileID: 237056301007406322, guid: 8c9df5189dc54b642a3f3edffac3ca37, type: 3}
+  - {fileID: 3476728153160009121, guid: 671d3462b680b064586056c6e2bbccca, type: 3}
+  - {fileID: 1317900538016240287, guid: 6d92595e2cb374e448b9202182c86d16, type: 3}
+  - {fileID: 8470798625620320625, guid: 703965d402ccfc64ba4b25a72ea7afc1, type: 3}
+  - {fileID: 935279566187642203, guid: 9bf47edbd5e4b5640954e2f4b3046eb4, type: 3}
+  speed: 1
+  Pivot: {fileID: 420174802}
+  Generator: {fileID: 995109715}
+  typingManager: {fileID: 84550755}
+  isPlaying: 0
+  dropSE: {fileID: 8300000, guid: 13acf4a3329108b42b3791324eee1a7e, type: 3}
+  dropmissSE: {fileID: 8300000, guid: 4362011526cdde048aa12de8a2f501fe, type: 3}
+  rotatespeed: 300
 --- !u!1 &84550751
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 84550753}
-  - component: {fileID: 84550752}
+  - component: {fileID: 84550755}
   - component: {fileID: 84550754}
   m_Layer: 0
   m_Name: TypingManager
@@ -349,25 +349,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &84550752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84550751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd2b4b0f1761ee94db94f9228a913311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fText: {fileID: 1021545857}
-  qText: {fileID: 1478383301}
-  aText: {fileID: 1591818098}
-  correctCountText: {fileID: 1564710163}
-  isPlaying: 1
-  typingSE: {fileID: 8300000, guid: f13ac0eb83777f048883b1a4f083b62e, type: 3}
-  correctSE: {fileID: 8300000, guid: 9a5148dd5baf03845a92e9bfbf3336dc, type: 3}
 --- !u!4 &84550753
 Transform:
   m_ObjectHideFlags: 0
@@ -479,6 +460,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &84550755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84550751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2b4b0f1761ee94db94f9228a913311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fText: {fileID: 1021545857}
+  qText: {fileID: 1478383301}
+  aText: {fileID: 1591818098}
+  correctCountText: {fileID: 1564710163}
+  isPlaying: 1
+  currentDifficulty: 0
+  typingSE: {fileID: 8300000, guid: f13ac0eb83777f048883b1a4f083b62e, type: 3}
+  correctSE: {fileID: 8300000, guid: 9a5148dd5baf03845a92e9bfbf3336dc, type: 3}
 --- !u!1 &170104695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1408,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420174803}
   m_LocalEulerAnglesHint: {x: 47.552, y: 0, z: 0}
+--- !u!1 &995109715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7628487230837721484, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
+  m_PrefabInstance: {fileID: 1969260080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1021545853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,8 +1633,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff613be52289244d954304d988a1a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  donutgenerator: {fileID: 16681595}
-  typingmanager: {fileID: 84550752}
+  donutgenerator: {fileID: 16681597}
+  typingmanager: {fileID: 84550755}
   countdown: 10
   gameOverText: {fileID: 1304477355}
   timeText: {fileID: 1675015870}
@@ -2873,7 +2879,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5869213248351403094, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 16681595}
+      addedObject: {fileID: 16681597}
     - targetCorrespondingSourceObject: {fileID: 5869213248351403094, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 16681596}

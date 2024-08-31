@@ -7,6 +7,8 @@ public class Gonextstage3 : MonoBehaviour
 {
     private AudioSource audiosource;
     public AudioClip start3SE;
+    public TypingManager typingManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +19,10 @@ public class Gonextstage3 : MonoBehaviour
     {
         audiosource.PlayOneShot(start3SE);
         selecter.sel = 3;
-        Invoke("GoSelectStage",1.0f);
+        Invoke("GoSelectStage3",1.0f);
     }
 
-    private void GoSelectStage(){
+    private void GoSelectStage3(){
         SceneManager.LoadScene("SampleScene3");
     }
 }
