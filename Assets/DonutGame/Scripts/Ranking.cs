@@ -7,7 +7,7 @@ public class Ranking : MonoBehaviour {
     
 
     string[] ranking = { "ランキング1位", "ランキング2位", "ランキング3位", "ランキング4位", "ランキング5位" };
-    int[] rankingValue = new int[5];
+    private int[] rankingValue = new int[5];
 
     [SerializeField, Header("表示させるテキスト")]
     public Text firsttext;
