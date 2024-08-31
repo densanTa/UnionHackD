@@ -73,7 +73,7 @@ public class SpawnPrefab : MonoBehaviour
                     audiosource.PlayOneShot(dropmissSE);
                 }
 
-                if (distance > 0.1)
+                /*if (distance > 0.1)
                 {
                     if (Input.GetKey(KeyCode.UpArrow))
                     {
@@ -87,7 +87,8 @@ public class SpawnPrefab : MonoBehaviour
                     {
                         transform.Translate(0, 0, -speed * Time.deltaTime);
                     }
-                }
+                }*/
+
             
 
                 

@@ -330,6 +330,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &16681597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16681593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559e063ba87d7474caec082ba6c3a2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.21
+  frequency: 1
 --- !u!1 &84550751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1234,6 @@ GameObject:
   - component: {fileID: 906436368}
   - component: {fileID: 906436367}
   - component: {fileID: 906436366}
-  - component: {fileID: 906436369}
   m_Layer: 0
   m_Name: DonutSensor
   m_TagString: Sensor
@@ -1314,18 +1327,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906436364}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &906436369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906436364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0818828e29ac9d84094cef47bb574014, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,7 +2764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112226912059890188, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.276
+      value: -0.427
       objectReference: {fileID: 0}
     - target: {fileID: 2112226912059890188, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2813,6 +2814,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5869213248351403094, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 16681596}
+    - targetCorrespondingSourceObject: {fileID: 5869213248351403094, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 16681597}
   m_SourcePrefab: {fileID: 100100000, guid: c8c21689e419d46b08cd83b3f6f0af1c, type: 3}
 --- !u!1 &2045273707
 GameObject:
