@@ -80,7 +80,7 @@ public class TypingManager : MonoBehaviour
         {
             new string[] {"いぬ","ねこ"}, // Easy
             new string[] {"もんだい","うし"}, // Medium
-            new string[] {"うなぎ","さけ"}, // Hard
+            new string[] {"こんぴゅーた","えれくとろにくす","いんたーねっと","そふとうぇあ","でじたるかめら","てれびじょん","ぷろぐらむ","もばいるでばいす","しみゅれーしょん","ばーちゃるりありてぃ","どきゅめんたりー","えねるぎー","しすてむえんじにあ","てくのろじー","ぐろーばる","すーぱーまーけっと","りーだーしっぷ","いんすぴれーしょん","いのべーしょん","りさいくる","あにめーしょん","おーでぃおびじゅある","こみゅにけーしょん","あぷりけーしょん","せきゅりてぃー","ふぁしりてーしょん","おーとめーしょん","あくせしびりてぃ","こんふぃぎゅれーしょん","まねーじめんと","えくすぺりえんす","ぱふぉーまんす","いんふらすとらくちゃー","でざいん","ぷれぜんてーしょん","くりえいてぃぶ","みにまりずむ","とらんすふぉーめーしょん","いみゅにてぃ","ぷろとこる","まにふぇすと","ばりでーしょん","りふぁれんす","とらんじしょん","おぺれーしょん","こんせぷと","しみゅれーた","まーけてぃんぐ","でぃれくたー","ぷろふぇっしょなる"}, // Hard
             new string[] {"ぶた","とり"}  // Expert
         };
 
@@ -88,7 +88,7 @@ public class TypingManager : MonoBehaviour
         {
             new string[] {"犬","猫"}, // Easy
             new string[] {"問題","牛"}, // Medium
-            new string[] {"鰻","鮭"}, // Hard
+            new string[] {"コンピュータ","エレクトロニクス","インターネット","ソフトウェア","デジタルカメラ","テレビジョン","プログラム","モバイルデバイス","シミュレーション","バーチャルリアリティ","ドキュメンタリー","エネルギー","システムエンジニア","テクノロジー","グローバル","スーパーマーケット","リーダーシップ","インスピレーション","イノベーション","リサイクル","アニメーション","オーディオビジュアル","コミュニケーション","アプリケーション","セキュリティー","ファシリテーション","オートメーション","アクセシビリティ","コンフィギュレーション","マネージメント","エクスペリエンス","パフォーマンス","インフラストラクチャー","デザイン","プレゼンテーション","クリエイティブ","ミニマリズム","トランスフォーメーション","イミュニティ","プロトコル","マニフェスト","バリデーション","リファレンス","トランジション","オペレーション","コンセプト","シミュレーター","マーケティング","ディレクター","プロフェッショナル"}, // Hard
             new string[] {"豚","鳥"}  // Expert
         };
 
@@ -96,7 +96,8 @@ public class TypingManager : MonoBehaviour
         {
             new string[] {"inu","neko"}, // Easy
             new string[] {"mondai","usi"}, // Medium
-            new string[] {"unagi","sake"}, // Hard
+            new string[] {"konpyu-ta","erekutoronikusu","inta-netto","sofutouea","dejitarukamera","terebijon","puroguramu","mobairudebaisu","simyure-shon","ba-charuriariti",
+"dokyumentari-","enerugi-","shisutemu-enjinia","tekunoroji-","guro-baru","su-pa-ma-ketto","ri-da-shippu","insupire-shon","inobe-shon","risaikuru","anime-shon","o-diobijuaru","komyunike-shon","apurike-shon","sekyuriti-","fashirite-shon","o-tome-shon","akuseshibiriti","konfigyure-shon","mane-jimento","ekusuperiensu","pafo-mansu","infrasutorakucha-","dezain","purezente-shon","kurieitibu","minimarizumu","toransufo-me-shon","imyuniti","purotokoru","manifesuto","baride-shon","rifarensu","toranjishon","opere-shon","konseputo","shimyure-ta-","ma-ketingu","direkutā","purofesshonaru"}, // Hard
             new string[] {"buta","tori"}  // Expert
         };
     }
