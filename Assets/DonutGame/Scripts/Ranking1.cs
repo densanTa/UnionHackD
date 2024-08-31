@@ -6,64 +6,69 @@ public class Ranking1 : MonoBehaviour {
     [SerializeField,Header("数値")]
     
 
-    string[] ranking = { "ランキング1位", "ランキング2位", "ランキング3位", "ランキング4位", "ランキング5位" };
-    private int[] rankingValue = new int[5];
+    string[] rankinga = { "ランキング1位", "ランキング2位", "ランキング3位", "ランキング4位", "ランキング5位" };
+    private int[] rankingValuea = new int[5];
 
     [SerializeField, Header("表示させるテキスト")]
-    public Text firsttext;
-    public Text secondtext;
-    public Text thirdtext;
-    public Text forthtext;
-    public Text fifthtext;
+    public Text firsttext1;
+    public Text secondtext1;
+    public Text thirdtext1;
+    public Text forthtext1;
+    public Text fifthtext1;
+
+    public int tokuten1 = 0;
     
     // Use this for initialization
     void Start ()
     {
+        tokuten1 = Timecounter_a.score_1;
         GetRanking();
 
-        SetRanking(Timecounter_b.score_2);
+        SetRanking(tokuten1);
 
         
-            firsttext.text = "1st : " + rankingValue[0].ToString();
-            secondtext.text = "2nd : " + rankingValue[1].ToString();
-            thirdtext.text = "3rd : " + rankingValue[2].ToString();
-            forthtext.text = "4th : " + rankingValue[3].ToString();
-            fifthtext.text = "5th : " + rankingValue[4].ToString();
+            firsttext1.text = "1st : " + rankingValuea[0].ToString();
+            secondtext1.text = "2nd : " + rankingValuea[1].ToString();
+            thirdtext1.text = "3rd : " + rankingValuea[2].ToString();
+            forthtext1.text = "4th : " + rankingValuea[3].ToString();
+            fifthtext1.text = "5th : " + rankingValuea[4].ToString();
+
+        tokuten1 = 0;
         
     }
 
     /// <summary>
     /// ランキング呼び出し
     /// </summary>
-    void GetRanking()
+    private void GetRanking()
     {
         //ランキング呼び出し
-        for (int i = 0; i < ranking.Length; i++)
+        for (int i = 0; i < rankinga.Length; i++)
         {
-            rankingValue[i]=PlayerPrefs.GetInt(ranking[i]);
+            rankingValuea[i]=PlayerPrefs.GetInt(rankinga[i]);
         }
     }
     /// <summary>
     /// ランキング書き込み
     /// </summary>
-    void SetRanking(int _value)
+    private void SetRanking(int _valuea)
     {
         //書き込み用
-        for (int i = 0; i < ranking.Length; i++)
+        for (int i = 0; i < rankinga.Length; i++)
         {
                 //取得した値とRankingの値を比較して入れ替え
-                if (_value>rankingValue[i])
+                if (_valuea>rankingValuea[i])
                 {
-                    var change = rankingValue[i];
-                    rankingValue[i] = _value;
-                    _value = change;
+                    var changea = rankingValuea[i];
+                    rankingValuea[i] = _valuea;
+                    _valuea = changea;
                 }
         }
 
         //入れ替えた値を保存
-        for (int i = 0; i < ranking.Length; i++)
+        for (int i = 0; i < rankinga.Length; i++)
         {
-            PlayerPrefs.SetInt(ranking[i],rankingValue[i]);
+            PlayerPrefs.SetInt(rankinga[i],rankingValuea[i]);
         }
     }
 }

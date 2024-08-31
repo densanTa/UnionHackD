@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Ranking : MonoBehaviour {
+public class Ranking4 : MonoBehaviour {
 
     [SerializeField,Header("数値")]
     
@@ -10,32 +10,38 @@ public class Ranking : MonoBehaviour {
     private int[] rankingValue = new int[5];
 
     [SerializeField, Header("表示させるテキスト")]
-    public Text firsttext;
-    public Text secondtext;
-    public Text thirdtext;
-    public Text forthtext;
-    public Text fifthtext;
+    public Text firsttext4;
+    public Text secondtext4;
+    public Text thirdtext4;
+    public Text forthtext4;
+    public Text fifthtext4;
+
+    public int tokuten4 = 0;
     
     // Use this for initialization
     void Start ()
     {
+        tokuten4 = Timecounter_d.score_4;
+
         GetRanking();
 
-        SetRanking(Timecounter_a.score_1);
+        SetRanking(tokuten4);
 
         
-            firsttext.text = "1st : " + rankingValue[0].ToString();
-            secondtext.text = "2nd : " + rankingValue[1].ToString();
-            thirdtext.text = "3rd : " + rankingValue[2].ToString();
-            forthtext.text = "4th : " + rankingValue[3].ToString();
-            fifthtext.text = "5th : " + rankingValue[4].ToString();
+            firsttext4.text = "1st : " + rankingValue[0].ToString();
+            secondtext4.text = "2nd : " + rankingValue[1].ToString();
+            thirdtext4.text = "3rd : " + rankingValue[2].ToString();
+            forthtext4.text = "4th : " + rankingValue[3].ToString();
+            fifthtext4.text = "5th : " + rankingValue[4].ToString();
+        
+        tokuten4 = 0;
         
     }
 
     /// <summary>
     /// ランキング呼び出し
     /// </summary>
-    void GetRanking()
+    private void GetRanking()
     {
         //ランキング呼び出し
         for (int i = 0; i < ranking.Length; i++)
@@ -46,7 +52,7 @@ public class Ranking : MonoBehaviour {
     /// <summary>
     /// ランキング書き込み
     /// </summary>
-    void SetRanking(int _value)
+    private void SetRanking(int _value)
     {
         //書き込み用
         for (int i = 0; i < ranking.Length; i++)

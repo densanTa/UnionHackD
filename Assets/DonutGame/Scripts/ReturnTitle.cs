@@ -17,14 +17,16 @@ public class ReturnTitle : MonoBehaviour
 
     public void OnRetry(){
         audiosource.PlayOneShot(returnSE);
-        Invoke("ReturnTitlepush",1.0f);
-    }
-
-    public void ReturnTitlepush(){
         Timecounter_a.score_1 = 0;
         Timecounter_b.score_2 = 0;
         Timecounter_c.score_3 = 0;
         Timecounter_d.score_4 = 0;
+
+        Invoke("ReturnTitlepush",1.0f);
+    }
+
+    public void ReturnTitlepush(){
+        
         SceneManager.LoadScene("Title");
     }
 }

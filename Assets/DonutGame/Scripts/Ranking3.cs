@@ -10,32 +10,38 @@ public class Ranking3 : MonoBehaviour {
     private int[] rankingValue = new int[5];
 
     [SerializeField, Header("表示させるテキスト")]
-    public Text firsttext;
-    public Text secondtext;
-    public Text thirdtext;
-    public Text forthtext;
-    public Text fifthtext;
+    public Text firsttext3;
+    public Text secondtext3;
+    public Text thirdtext3;
+    public Text forthtext3;
+    public Text fifthtext3;
+
+    public int tokuten3 = 0;
     
     // Use this for initialization
     void Start ()
     {
+        tokuten3 = Timecounter_c.score_3;
+
         GetRanking();
 
-        SetRanking(Timecounter_d.score_4);
+        SetRanking(tokuten3);
 
         
-            firsttext.text = "1st : " + rankingValue[0].ToString();
-            secondtext.text = "2nd : " + rankingValue[1].ToString();
-            thirdtext.text = "3rd : " + rankingValue[2].ToString();
-            forthtext.text = "4th : " + rankingValue[3].ToString();
-            fifthtext.text = "5th : " + rankingValue[4].ToString();
+            firsttext3.text = "1st : " + rankingValue[0].ToString();
+            secondtext3.text = "2nd : " + rankingValue[1].ToString();
+            thirdtext3.text = "3rd : " + rankingValue[2].ToString();
+            forthtext3.text = "4th : " + rankingValue[3].ToString();
+            fifthtext3.text = "5th : " + rankingValue[4].ToString();
+        
+        tokuten3 = 0;
         
     }
 
     /// <summary>
     /// ランキング呼び出し
     /// </summary>
-    void GetRanking()
+    private void GetRanking()
     {
         //ランキング呼び出し
         for (int i = 0; i < ranking.Length; i++)
@@ -46,7 +52,7 @@ public class Ranking3 : MonoBehaviour {
     /// <summary>
     /// ランキング書き込み
     /// </summary>
-    void SetRanking(int _value)
+    private void SetRanking(int _value)
     {
         //書き込み用
         for (int i = 0; i < ranking.Length; i++)
