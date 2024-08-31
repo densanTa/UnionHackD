@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TimeCounter : MonoBehaviour
+public class Timecounter1 : MonoBehaviour
 {
     public SpawnPrefab donutgenerator;
     public TypingManager typingmanager;
@@ -23,6 +23,8 @@ public class TimeCounter : MonoBehaviour
     public GameObject count_2;
     public GameObject count_1;
     public GameObject count_start;
+
+    public static int score_1;
     void Start()
     {
         gameOverText.SetActive(false);
@@ -69,6 +71,7 @@ public class TimeCounter : MonoBehaviour
 
     void ChangeScene()
     {
+        score_1 = GameController.score;
         SceneManager.LoadScene("Result");
     }
     void FinishSESounder(){

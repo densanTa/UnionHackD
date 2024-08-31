@@ -1495,7 +1495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1078669962}
-  - component: {fileID: 1078669961}
+  - component: {fileID: 1078669964}
   - component: {fileID: 1078669963}
   m_Layer: 0
   m_Name: TimeCounter
@@ -1504,30 +1504,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1078669961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078669960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edcc6917b35c446438aac0dc334db9b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  donutgenerator: {fileID: 16681595}
-  typingmanager: {fileID: 84550752}
-  countdown: 90
-  gameOverText: {fileID: 1304477355}
-  timeText: {fileID: 1675015870}
-  FinishSE: {fileID: 8300000, guid: 9ee450a6a4fadda49bb5daed6e83fa75, type: 3}
-  CountdownSE: {fileID: 8300000, guid: d55c53d85dd55274cb674756a62081bd, type: 3}
-  isPlaying: 0
-  count_3: {fileID: 650890913}
-  count_2: {fileID: 1141443740}
-  count_1: {fileID: 1641789979}
-  count_start: {fileID: 822354891}
 --- !u!4 &1078669962
 Transform:
   m_ObjectHideFlags: 0
@@ -1639,6 +1615,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1078669964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078669960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5495624cf73b6b4295a8b528fb72634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  donutgenerator: {fileID: 16681595}
+  typingmanager: {fileID: 84550752}
+  countdown: 90
+  gameOverText: {fileID: 1304477355}
+  timeText: {fileID: 1675015870}
+  FinishSE: {fileID: 8300000, guid: 9ee450a6a4fadda49bb5daed6e83fa75, type: 3}
+  CountdownSE: {fileID: 8300000, guid: d55c53d85dd55274cb674756a62081bd, type: 3}
+  isPlaying: 0
+  count_3: {fileID: 650890913}
+  count_2: {fileID: 1141443740}
+  count_1: {fileID: 1641789979}
+  count_start: {fileID: 822354891}
 --- !u!1 &1119199023
 GameObject:
   m_ObjectHideFlags: 0

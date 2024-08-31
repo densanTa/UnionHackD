@@ -13,13 +13,13 @@ EditorBuildSettings:
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/SampleScene2.unity
-    guid: 2660ab3039bd98a4299aa234da3636d8
+    guid: ea8e24420c63f9246872ee260eb16394
   - enabled: 1
     path: Assets/Scenes/SampleScene3.unity
-    guid: 7ef0a5519f4897447828e6ca55db5ebd
+    guid: 9452cb3318d1b494c90aa4215cea189b
   - enabled: 1
     path: Assets/Scenes/SampleScene4.unity
-    guid: 6c74f6d25d3604a42bfc96907009f089
+    guid: e6d8996cac2c62046ba8102c6979bf22
   - enabled: 1
     path: Assets/Scenes/Result.unity
     guid: 7742704cd71262848a962d11e371ec9e

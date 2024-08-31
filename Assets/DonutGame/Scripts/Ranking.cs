@@ -21,7 +21,7 @@ public class Ranking : MonoBehaviour {
     {
         GetRanking();
 
-        SetRanking(GameController.score);
+        SetRanking(Timecounter_a.score_1);
 
         
             firsttext.text = "1st : " + rankingValue[0].ToString();
