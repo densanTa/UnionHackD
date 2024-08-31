@@ -78,24 +78,24 @@ public class TypingManager : MonoBehaviour
         // Easy, Medium, Hard, Expertの順に問題を設定
         furiganaLists = new string[][]
         {
-            new string[] {"いぬ","ねこ"}, // Easy
-            new string[] {"もんだい","うし"}, // Medium
+            new string[] {"かばん","いえ","やね","すまほ","ぱそこん","まいく","いやほん","いす","むし","おせろ","はいしん","おんがく","びんご","のり","でんち","えんぴつ","べると","はんがー","ぼうし","げーむ","まんが","めがね","こんびに","どうが","こらぼ","ぱり","ろんどん","おおさか","こうべ","おかやま","とうきょう","せんだい","ばいと","かわ","さいん","おにぎり","ぱん","らーめん","うどん","かがわ","きょうと","うし","うま","しか","うさぎ","いぬ","ねこ","ぶた","とかげ","くも","とんぼ","ばった"}, // Easy
+            new string[] {"いべんと","さーくる","えいりあん","たいふう","こすぷれ","めんてなんす","ろさんぜるす","にゅーよーく","すいーつ","たっちぺん","ぬいぐるみ","あいますく","たぺすとりー","ふぁっしょん","こんせぷと","せいふく","きーぼーど","へっどほん","いやりんぐ","めんちかつ","かれーぱん","ふらいどちきん","ふらんくふると","えくれあ","しゅーくりーむ","どらやき","わっふる","ふぃなんしぇ","わらびもち","あいすくりーむ","よーぐると","かふぇらて","こーひー","れもねーど","かーどげーむ","かれんだー","きーほるだー","さんこうしょ","とーとばっぐ","ほーむらん","せんぷうき","じゅうでんき","けいこうとう","あかうんと","らんどせる","ふくぶくろ","うわのそら","げんそきごう","しあいしゅうりょう","なまやけにく","じんろうげーむ","たんこうぼん"}, // Medium
             new string[] {"うなぎ","さけ"}, // Hard
             new string[] {"ぶた","とり"}  // Expert
         };
 
         questionLists = new string[][]
         {
-            new string[] {"犬","猫"}, // Easy
-            new string[] {"問題","牛"}, // Medium
+            new string[] {"鞄","家","屋根","スマホ","パソコン","マイク","イヤホン","椅子","虫","オセロ","配信","音楽","ビンゴ","糊","電池","鉛筆","ベルト","ハンガー","帽子","ゲーム","漫画","眼鏡","コンビニ","動画","コラボ","パリ","ロンドン","大阪","神戸","岡山","東京","仙台","バイト","川","サイン","おにぎり","パン","ラーメン","うどん","香川","京都","牛","馬","鹿","兎","犬","猫","豚","トカゲ","雲","トンボ","バッタ"}, // Easy
+            new string[] {"イベント", "サークル", "エイリアン","台風", "コスプレ", "メンテナンス", "ロサンゼルス", "ニューヨーク", "スイーツ", "タッチペン", "ぬいぐるみ", "アイマスク", "タペストリー", "ファッション", "コンセプト", "制服", "キーボード", "ヘッドホン", "イヤリング", "メンチカツ", "カレーパン", "フライドチキン", "フランクフルト", "エクレア", "シュークリーム", "どら焼き", "ワッフル", "フィナンシェ", "わらび餅", "アイスクリーム", "ヨーグルト", "カフェラテ", "コーヒー", "レモネード", "カードゲーム", "カレンダー","キーホルダー","参考書","トートバッグ","ホームラン","扇風機","充電器","蛍光灯","アカウント","ランドセル","福袋","上の空","元素記号","試合終了","生焼け肉","人狼ゲーム","単行本"}, // Medium
             new string[] {"鰻","鮭"}, // Hard
             new string[] {"豚","鳥"}  // Expert
         };
 
         answerLists = new string[][]
         {
-            new string[] {"inu","neko"}, // Easy
-            new string[] {"mondai","usi"}, // Medium
+            new string[] {"kabann","ie","yane","sumaho","pasokonn","maiku","iyahonn","isu","musi","osero","haisinn","ongaku","bingo","nori","denti","enpitu","beruto","hanga-","bousi","ge-mu","manga","megane","konbini","douga","korabo","pari","rondonn","oosaka","koube","okayama","toukyou","sendai","baito","kawa","sainn","onigiri","pann","ra-menn","udonn","kagawa","kyouto","usi","uma","sika","usagi","inu","neko","buta","tokage","kumo","tonbo","batta"}, // Easy
+            new string[] {"ibento","sa-kuru","eiriann","taihuu","kosupure","mentenansu","rosanzerusu","nyu-yo-ku","sui-tu","tattipenn","nuigurumi","aimasuku","tapesutori-","fassyonn","konseputo","seihuku","ki-bo-do","heddohonn","iyaringu","mentikatu","kare-pann","huraidotikinn","hurankuhuruto","ekurea","syu-kuri-mu","dorayaki","wahhuru","finansye","warabimoti","aisukuri-mu","yo-guruto","kaferate","ko-hi-","remone-do","ka-doge-mu","karenda-","ki-horuda-","sankousyo","to-tobaggu","ho-murann","senpuuki","zyuudenki","keikoutou","akaunto","randoseru","hukubukuro","uwanosora","gensokigou","siaisyuuryou","namayakeniku","zinrouge-mu","tankoubon"}, // Medium
             new string[] {"unagi","sake"}, // Hard
             new string[] {"buta","tori"}  // Expert
         };

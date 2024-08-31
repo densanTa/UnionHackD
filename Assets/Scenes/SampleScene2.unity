@@ -324,7 +324,7 @@ MonoBehaviour:
   - {fileID: 8470798625620320625, guid: 703965d402ccfc64ba4b25a72ea7afc1, type: 3}
   - {fileID: 935279566187642203, guid: 9bf47edbd5e4b5640954e2f4b3046eb4, type: 3}
   speed: 1
-  Pivot: {fileID: 420174802}
+  Pivot: {fileID: 1815488886}
   Generator: {fileID: 995109715}
   typingManager: {fileID: 84550755}
   isPlaying: 0
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   donutgenerator: {fileID: 16681597}
   typingmanager: {fileID: 84550755}
-  countdown: 10
+  countdown: 90
   gameOverText: {fileID: 1304477355}
   timeText: {fileID: 1675015870}
   FinishSE: {fileID: 8300000, guid: 9ee450a6a4fadda49bb5daed6e83fa75, type: 3}
