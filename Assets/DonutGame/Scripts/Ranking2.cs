@@ -6,8 +6,8 @@ public class Ranking2 : MonoBehaviour {
     [SerializeField,Header("数値")]
     
 
-    string[] rankingb = { "ランキング1位", "ランキング2位", "ランキング3位", "ランキング4位", "ランキング5位" };
-    public int[] rankingValueb= new int[5];
+    string[] ranking = { "ランキング1位_Level2", "ランキング2位_Level2", "ランキング3位_Level2", "ランキング4位_Level2", "ランキング5位_Level2" };
+    public int[] rankingValue= new int[5];
 
     [SerializeField, Header("表示させるテキスト")]
     public Text firsttext2;
@@ -22,7 +22,7 @@ public class Ranking2 : MonoBehaviour {
     void Start ()
     {
         
-
+        
         GetRanking();
         if(selecter.sel == 2){
         SetRanking(GameController.score);
@@ -30,11 +30,11 @@ public class Ranking2 : MonoBehaviour {
         }
 
         
-            firsttext2.text = "1st : " + rankingValueb[0].ToString();
-            secondtext2.text = "2nd : " + rankingValueb[1].ToString();
-            thirdtext2.text = "3rd : " + rankingValueb[2].ToString();
-            forthtext2.text = "4th : " + rankingValueb[3].ToString();
-            fifthtext2.text = "5th : " + rankingValueb[4].ToString();
+            firsttext2.text = "1st : " + rankingValue[0].ToString();
+            secondtext2.text = "2nd : " + rankingValue[1].ToString();
+            thirdtext2.text = "3rd : " + rankingValue[2].ToString();
+            forthtext2.text = "4th : " + rankingValue[3].ToString();
+            fifthtext2.text = "5th : " + rankingValue[4].ToString();
         
         
     }
@@ -45,9 +45,9 @@ public class Ranking2 : MonoBehaviour {
     private void GetRanking()
     {
         //ランキング呼び出し
-        for (int i = 0; i < rankingb.Length; i++)
+        for (int i = 0; i < ranking.Length; i++)
         {
-            rankingValueb[i]=PlayerPrefs.GetInt(rankingb[i]);
+            rankingValue[i]=PlayerPrefs.GetInt(ranking[i]);
         }
     }
     /// <summary>
@@ -56,21 +56,21 @@ public class Ranking2 : MonoBehaviour {
     private void SetRanking(int _value)
     {
         //書き込み用
-        for (int i = 0; i < rankingb.Length; i++)
+        for (int i = 0; i < ranking.Length; i++)
         {
                 //取得した値とRankingの値を比較して入れ替え
-                if (_value>rankingValueb[i])
+                if (_value>rankingValue[i])
                 {
-                    var change = rankingValueb[i];
-                    rankingValueb[i] = _value;
+                    var change = rankingValue[i];
+                    rankingValue[i] = _value;
                     _value = change;
                 }
         }
 
         //入れ替えた値を保存
-        for (int i = 0; i < rankingb.Length; i++)
+        for (int i = 0; i < ranking.Length; i++)
         {
-            PlayerPrefs.SetInt(rankingb[i],rankingValueb[i]);
+            PlayerPrefs.SetInt(ranking[i],rankingValue[i]);
         }
     }
 }
