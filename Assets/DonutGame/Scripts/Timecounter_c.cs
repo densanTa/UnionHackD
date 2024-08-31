@@ -24,7 +24,7 @@ public class Timecounter_c : MonoBehaviour
     public GameObject count_1;
     public GameObject count_start;
 
-    public static int score_3 = 0;
+    
     void Start()
     {
         gameOverText.SetActive(false);
@@ -61,7 +61,7 @@ public class Timecounter_c : MonoBehaviour
             donutgenerator.isPlaying = false;
             typingmanager.isPlaying = false;
             gameOverText.SetActive(true);
-            score_3 = GameController.score;
+            
             Invoke("ChangeScene", 4.0f);
         }
 
@@ -72,7 +72,7 @@ public class Timecounter_c : MonoBehaviour
 
     void ChangeScene()
     {
-        Debug.Log(score_3);
+        
         SceneManager.LoadScene("Result");
     }
     void FinishSESounder(){

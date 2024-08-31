@@ -7,7 +7,7 @@ public class Ranking1 : MonoBehaviour {
     
 
     string[] rankinga = { "ランキング1位", "ランキング2位", "ランキング3位", "ランキング4位", "ランキング5位" };
-    private int[] rankingValuea = new int[5];
+    public int[] rankingValuea = new int[5];
 
     [SerializeField, Header("表示させるテキスト")]
     public Text firsttext1;
@@ -16,16 +16,17 @@ public class Ranking1 : MonoBehaviour {
     public Text forthtext1;
     public Text fifthtext1;
 
-    public int tokuten1 = 0;
+    
     
     // Use this for initialization
     void Start ()
     {
-        tokuten1 = Timecounter_a.score_1;
+                
         GetRanking();
-
-        SetRanking(tokuten1);
-
+        if(selecter.sel == 1){
+        SetRanking(GameController.score);
+        Debug.Log("set1");
+        }
         
             firsttext1.text = "1st : " + rankingValuea[0].ToString();
             secondtext1.text = "2nd : " + rankingValuea[1].ToString();
@@ -33,9 +34,13 @@ public class Ranking1 : MonoBehaviour {
             forthtext1.text = "4th : " + rankingValuea[3].ToString();
             fifthtext1.text = "5th : " + rankingValuea[4].ToString();
 
-        tokuten1 = 0;
         
+
     }
+
+        
+        
+    
 
     /// <summary>
     /// ランキング呼び出し

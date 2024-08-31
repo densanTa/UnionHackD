@@ -16,6 +16,7 @@ public class Gonextstage2 : MonoBehaviour
     public void Onselectstage2()
     {
         audiosource.PlayOneShot(start2SE);
+        selecter.sel = 2;
         Invoke("GoSelectStage",1.0f);
     }
 

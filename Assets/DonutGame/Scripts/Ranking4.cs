@@ -6,8 +6,8 @@ public class Ranking4 : MonoBehaviour {
     [SerializeField,Header("数値")]
     
 
-    string[] ranking = { "ランキング1位", "ランキング2位", "ランキング3位", "ランキング4位", "ランキング5位" };
-    private int[] rankingValue = new int[5];
+    string[] rankingd = { "ランキング1位", "ランキング2位", "ランキング3位", "ランキング4位", "ランキング5位" };
+    public int[] rankingValued = new int[5];
 
     [SerializeField, Header("表示させるテキスト")]
     public Text firsttext4;
@@ -16,25 +16,29 @@ public class Ranking4 : MonoBehaviour {
     public Text forthtext4;
     public Text fifthtext4;
 
-    public int tokuten4 = 0;
+    
     
     // Use this for initialization
     void Start ()
     {
-        tokuten4 = Timecounter_d.score_4;
+        
+        
 
         GetRanking();
+        if(selecter.sel == 4){
 
-        SetRanking(tokuten4);
+        SetRanking(GameController.score);
+        Debug.Log("set4");
+        }
 
         
-            firsttext4.text = "1st : " + rankingValue[0].ToString();
-            secondtext4.text = "2nd : " + rankingValue[1].ToString();
-            thirdtext4.text = "3rd : " + rankingValue[2].ToString();
-            forthtext4.text = "4th : " + rankingValue[3].ToString();
-            fifthtext4.text = "5th : " + rankingValue[4].ToString();
+            firsttext4.text = "1st : " + rankingValued[0].ToString();
+            secondtext4.text = "2nd : " + rankingValued[1].ToString();
+            thirdtext4.text = "3rd : " + rankingValued[2].ToString();
+            forthtext4.text = "4th : " + rankingValued[3].ToString();
+            fifthtext4.text = "5th : " + rankingValued[4].ToString();
         
-        tokuten4 = 0;
+        
         
     }
 
@@ -44,9 +48,9 @@ public class Ranking4 : MonoBehaviour {
     private void GetRanking()
     {
         //ランキング呼び出し
-        for (int i = 0; i < ranking.Length; i++)
+        for (int i = 0; i < rankingd.Length; i++)
         {
-            rankingValue[i]=PlayerPrefs.GetInt(ranking[i]);
+            rankingValued[i]=PlayerPrefs.GetInt(rankingd[i]);
         }
     }
     /// <summary>
@@ -55,21 +59,21 @@ public class Ranking4 : MonoBehaviour {
     private void SetRanking(int _value)
     {
         //書き込み用
-        for (int i = 0; i < ranking.Length; i++)
+        for (int i = 0; i < rankingd.Length; i++)
         {
                 //取得した値とRankingの値を比較して入れ替え
-                if (_value>rankingValue[i])
+                if (_value>rankingValued[i])
                 {
-                    var change = rankingValue[i];
-                    rankingValue[i] = _value;
+                    var change = rankingValued[i];
+                    rankingValued[i] = _value;
                     _value = change;
                 }
         }
 
         //入れ替えた値を保存
-        for (int i = 0; i < ranking.Length; i++)
+        for (int i = 0; i < rankingd.Length; i++)
         {
-            PlayerPrefs.SetInt(ranking[i],rankingValue[i]);
+            PlayerPrefs.SetInt(rankingd[i],rankingValued[i]);
         }
     }
 }
