@@ -366,6 +366,7 @@ MonoBehaviour:
   aText: {fileID: 1591818098}
   correctCountText: {fileID: 1564710163}
   isPlaying: 1
+  currentDifficulty: 0
   typingSE: {fileID: 8300000, guid: f13ac0eb83777f048883b1a4f083b62e, type: 3}
   correctSE: {fileID: 8300000, guid: 9a5148dd5baf03845a92e9bfbf3336dc, type: 3}
 --- !u!4 &84550753
@@ -1518,7 +1519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   donutgenerator: {fileID: 16681595}
   typingmanager: {fileID: 84550752}
-  countdown: 10
+  countdown: 90
   gameOverText: {fileID: 1304477355}
   timeText: {fileID: 1675015870}
   FinishSE: {fileID: 8300000, guid: 9ee450a6a4fadda49bb5daed6e83fa75, type: 3}
